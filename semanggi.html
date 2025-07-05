@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Dua Gambar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0f7fa;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: inline-block;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    .gambar-container {
+      margin-top: 20px;
+    }
+
+    .gambar-container img {
+      max-width: 300px;
+      margin: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Selamat Datang di Web Saya</h1>
+    <p>Klik tombol di bawah untuk melihat pesan dan dua gambar.</p>
+    <button onclick="tampilkanPesan()">Klik Saya</button>
+    <p id="pesan"></p>
+
+    <div class="gambar-container">
+      <img id="gambar1" alt="Gambar 1">
+      <img id="gambar2" alt="Gambar 2">
+    </div>
+  </div>
+
+  <script>
+    function tampilkanPesan() {
+      document.getElementById("pesan").textContent = "Halo! Dua gambar tampil dari JavaScript.";
+
+      const gambar1 = document.getElementById("gambar1");
+      const gambar2 = document.getElementById("gambar2");
+
+      gambar1.src = "file:///C:/Users/lenovo/OneDrive/Documents/web-sederhana/gambar%201.jpg";
+      gambar2.src = "file:///C:/Users/lenovo/OneDrive/Documents/web-sederhana/gambar%201.jpg";
+
+      gambar1.style.display = "inline-block";
+      gambar2.style.display = "inline-block";
+    }
+  </script>
+</body>
+</html>
